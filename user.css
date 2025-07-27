@@ -54,6 +54,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
+    cursor: pointer;
 }
 
 #mode svg {
@@ -230,5 +231,4 @@ body {
     position: relative;
 }
 
-/* ########### Profile Img ANd User Data Start #########  */
-    
+/* ########### Profile Img ANd User Data Start #########  
