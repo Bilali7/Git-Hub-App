@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Poppins,'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url(img/key.webp);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+#head {
+    color: #fff;
+    cursor: pointer;
+    padding-right: 1em;
+}
+
+#head:hover {
+    color: #2d2d2d;
+}
+
+.btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    min-width: 100px;
+    min-height: 50px;
+    z-index: 1;
+  }
+
+  /* Magnetic Field Button */
+  .magnetic {
+    background: #2d2d2d;
+    border: none;
+    overflow: visible;
+  }
+  
+  .particles-field {
+    position: absolute;
+    inset: -100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #2d2d2d;
+    border-radius: 50%;
+  }
+  
+  .magnetic:hover .particles-field {
+    opacity: 1;
+  }
+  
+  @keyframes particleFloat {
+    0% { transform: translate(var(--x), var(--y)) scale(0); }
+    50% { transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1); }
+    100% { transform: translate(var(--x), var(--y)) scale(0); }
+}
+
+

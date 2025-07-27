@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    /* --angle: 0deg; */
+    --base-color: white;
+    --base-variant: #fff;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode {
+    /* --angle: 0deg; */
+    --base-color: #070b1d;
+    /* --base-variant: #101425; */
+    --base-variant: #333;
+    --text-color: #ffffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins,'Segoe UI', sans-serif;
+}
+
+body {
+    /* background: #222; */
+    background-color: var(--base-variant);
+    color: var(--text-color); 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* color: #0095ff; */
+}
+
+#mode {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#mode svg {
+    fill: var(--primary-color);
+}
+
+#mode svg:last-child {
+    display: none;
+}
+
+.darkmode #mode svg:first-child {
+    display: none;
+}
+
+.darkmode #mode svg:last-child {
+    display: block;
+}
+
+/* ####### Search Button Start ######## */
+#card {
+    /* border: 2px solid black; */
+    text-align: center;
+    margin-top: 5em;
+    /* background: red; */
+}
+
+#card input {
+    width: 28%;
+    height: 5.8vh;
+    /* border: none; */
+    /* background: #333; */
+    border-radius: 0.6em;
+    border-bottom: red;
+    border: none;
+    outline: #333;
+    /* color: #fff; */
+    padding-left: 0.4em;
+    font-size: 1em;
+    font-weight: 600;
+    position: relative;
+}
+
+#card input:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #222;
+}
+
+.btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    border: none;
+    border-radius: 1.4em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-left: 2em;
+    min-width: 100px;
+    min-height: 50px;
+    z-index: 1;
+}
+
+/* Magnetic Field Button */
+.magnetic {
+    color: var(--text-color);
+    border: none;
+    outline: #333;
+    overflow: visible;
+}
+
+.particles-field {
+    position: absolute;
+    inset: -100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    /* background: #fff; */
+    background: #2d2d2d;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.magnetic:hover .particles-field {
+    opacity: 1;
+}
+
+@keyframes particleFloat {
+    0% { transform: translate(var(--x), var(--y)) scale(0); }
+    50% { transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1); }
+    100% { transform: translate(var(--x), var(--y)) scale(0); }
+}
+/* ####### Search Button End ######## */
+
+/* ########### Profile Img ANd User Data Start #########  */
+
+.any  {
+    /* border: 2px solid black; */
+    border: none;
+    box-shadow: 0px 0px 20px var(--accent-color);
+    border-radius: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46vh;
+    margin-top: 6%;
+    /* min-width: 80%; */
+    margin-left: 7%; 
+    margin-right: 7%;
+    /* background: #2d2d2d; */
+    /* position: relative; */
+} 
+
+/* .any::before {
+    filter: blur(10rem);
+    opacity: 0.6;
+} */
+
+/* .any::after { 
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 10%;
+    width: 10%; */
+    /* --angle: 0deg; */
+    /* background-image: conic-gradient(from var(--gradient-angle), var(--accent-color)); 
+    translate: -50% -50%;
+    top: 50%;
+    left: 50%;
+    border: linear-gradient(from var(--gradient-angle), transparent 60deg, red);
+    padding: 3px;
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+    }  */
+
+    /* .any::before {
+    filter: blur(1.5rem);
+    position: absolute;
+    opacity: 0.5;
+    }
+
+@keyframes rotation {
+    from {
+        --gradient-angle: 360deg;
+        }
+        to {
+        --gradient-angle: 0deg;
+    }
+}  */
+
+#avatar {
+    border: none;
+    border-radius: 50%;
+    width: 14%;
+}
+
+#profile {
+    /* margin-top: 2em;  */
+    border: none;
+    border-radius: 1.2em;
+    /* background: #333; */
+    /* color: #fff; */
+    width: 70%;
+    margin-left: 3.8em;
+    text-align: center;
+    position: relative;
+}
+
+/* ########### Profile Img ANd User Data Start #########  */
+    
